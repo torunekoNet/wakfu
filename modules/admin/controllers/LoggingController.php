@@ -17,13 +17,13 @@ class LoggingController extends Controller
 
         $pager = new CPagination($model->count($condition, $params));
         $pager->setPageSize(100);
-        $logging = $model->findAll([
+        $logging = $model->findAll(array(
             'condition' => $condition,
             'params' => $params,
             'offset' => $pager->getOffset(),
             'limit' => $pager->getLimit(),
             'order' => 'time desc',
-        ]);
+        ));
 
         $this->render('index', array(
             'logging' => new RedArrayDataProvider($logging),
