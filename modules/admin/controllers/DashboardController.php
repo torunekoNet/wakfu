@@ -23,7 +23,7 @@ class DashboardController extends Controller
     {
         $operationType = $this->request->getQuery('operationType', 'view');
         if (method_exists($this, $operationType)) {
-            call_user_func([$this, $operationType]);
+            call_user_func(array($this, $operationType));
         } else {
             $this->view();
         }
@@ -35,10 +35,10 @@ class DashboardController extends Controller
         if (empty($post)) {
             $this->response(404, '参数缺失');
         } else {
-            $exists = Setting::model()->findByAttributes([
+            $exists = Setting::model()->findByAttributes(array(
                 'section' => $post['section'],
                 'name' => $post['name'],
-            ]);
+            ));
             if (empty($exists)) {
                 $model = new Setting();
                 $model->attributes = array(
