@@ -66,7 +66,7 @@ return array(
             'transportOptions' => array(
                 'host' => 'smtp.sina.com',
                 'username' => 'toruneko@sina.com',
-                'password' => 'waitjh041025~!',
+                'password' => '',
                 'port' => '465',
                 'encryption' => 'tls',
             ),
