@@ -104,7 +104,7 @@ return array(
             'class' => 'CLogRouter',
             'routes' => array(
                 array(
-                    'class' => 'BaeLogRoute',
+                    'class' => 'CFileLogRoute',
                     'levels' => 'error, warning, info',
                 ),
             ),
