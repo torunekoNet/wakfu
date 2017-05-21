@@ -44,21 +44,20 @@ return array(
         ),
 
         'db' => array(
-            'connectionString' => 'mysql:host=sqld.duapp.com;port=4050;dbname=SyNBrwwRNaxibCvnbITx',
+            'connectionString' => 'mysql:host=127.0.0.1;port=3306;dbname=wakfu',
             'emulatePrepare' => true,
             'schemaCachingDuration' => 86400,
-            'username' => "77d93fa2c471405191d15571c02e508f",
-            'password' => "9e7170398e164dfbb1bfeb5378269697",
+            'username' => "root",
+            'password' => "toruneko",
             'charset' => 'utf8',
         ),
 
         'cache' => array(
-            'class' => 'BaeMemCache',
-            'host' => 'redis.duapp.com',
-            'port' => '80',
-            'username' => '77d93fa2c471405191d15571c02e508f',
-            'password' => '9e7170398e164dfbb1bfeb5378269697',
-            'dbname' => 'DATjkLvSSAgDtATmsWbw'
+            'class' => 'CRedisCache',
+            'hostname' => '127.0.0.1',
+            'port' => 6379,
+            'database' => 0,
+            'options' => STREAM_CLIENT_CONNECT,
         ),
 
         'mail' => array(
@@ -86,7 +85,7 @@ return array(
 
         'fraudmetrix' => array(
             'class' => 'ext.fraudmetrix.Fraudmetrix',
-            'apiUrl' => 'https://api.fraudmetrix.cn/riskService',
+            'apiUrl' => 'https://api.tongdun.cn/riskService',
             'partnerCode' => 'kf_Qox',
             'secretKey' => '0c09a4607edf4bc0b1f7ce83a2ecb85d'
         ),
