@@ -14,7 +14,7 @@ abstract class AuthAction extends RedAction
         $operationType = $this->request->getPost('operationType', false);
 
         if ($operationType && method_exists($this, $operationType)) {
-            call_user_func([$this, $operationType]);
+            call_user_func(array($this, $operationType));
         } else {
             $this->execute();
         }
