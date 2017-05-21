@@ -20,11 +20,11 @@ class Controller extends RedController
 
     public function actionIndex()
     {
-        $operation = Operation::model()->findByAttributes([
+        $operation = Operation::model()->findByAttributes(array(
             'module' => $this->getModule()->getId(),
             'controller' => $this->getId(),
             'action' => $this->getAction()->getId()
-        ]);
+        ));
         if ($operation->getAttribute('level') == 1) {
             $maxLevel = 2;
         } else {
