@@ -113,7 +113,7 @@ $(".product-radio").on("click", function(){
                 <h4 class="modal-title" id="qrPayLabel">Donate</h4>
             </div>
             <div class="modal-body">
-                <div style="background: url(/assets/main/aex04064xwrjbqjdp6rz3b1.png); width: 430px; height: 430px; margin: 0 auto;"></div>
+                <div style="background: url(http://assets.toruneko.net/main/aex04064xwrjbqjdp6rz3b1.png); width: 430px; height: 430px; margin: 0 auto;"></div>
                 <p>Thank you for your donation，We will add free Traffic for your support！</p>
                 <p>Direct：$1.00 USD = ￥6.00 CNY</p>
             </div>

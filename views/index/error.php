@@ -9,7 +9,7 @@
 <div class="row">
     <div class="col-md-12">
         <div style="text-align:center">
-            <img src="<?php echo $this->assets; ?>/main/notfound.gif"/>
+            <img src="http://assets.toruneko.net/main/notfound.gif"/>
 
             <h2>Page does not exist or has been deleted！</h2>
 
