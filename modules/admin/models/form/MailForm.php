@@ -38,7 +38,7 @@ class MailForm extends CFormModel
 
     public function push()
     {
-        $services = Service::model()->findAllByAttributes(['status' => 0]);
+        $services = Service::model()->findAllByAttributes(array('status' => 0));
         $accessKey = Yii::app()->params['secretKey'];
         $url = Yii::app()->createUrl('api/mail');
         $task = array();

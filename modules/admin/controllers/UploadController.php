@@ -42,6 +42,6 @@ class UploadController extends RedController
     public function response($status = 200, $info = 'success', $data = null)
     {
         header('Content-Type:application/json; charset=UTF-8');
-        echo CJSON::encode(['error' => $status, 'url' => $info]);
+        echo CJSON::encode(array('error' => $status, 'url' => $info));
     }
 }

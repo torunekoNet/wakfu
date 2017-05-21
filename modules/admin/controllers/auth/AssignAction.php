@@ -13,7 +13,7 @@ class AssignAction extends RedAction
     {
         $operationType = $this->request->getPost('operationType', 'execute');
         if (method_exists($this, $operationType)) {
-            call_user_func([$this, $operationType]);
+            call_user_func(array($this, $operationType));
         } else {
             $this->execute();
         }
@@ -26,7 +26,7 @@ class AssignAction extends RedAction
         if ($role == false) {
             $this->response(404, '参数错误');
         } else {
-            $operations = Operation::model()->findAll(['condition' => '`level`=2']);
+            $operations = Operation::model()->findAll(array('condition' => '`level`=2'));
             $opera = array();
             foreach ($operations as $operation) {
                 $auth = $this->auth->getOperationByPk($operation->getAttribute('id'));

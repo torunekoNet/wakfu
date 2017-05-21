@@ -13,7 +13,7 @@ class StatisticsAction extends RedAction
     {
         $operationType = $this->request->getQuery('operationType', 'load');
         if (method_exists($this, $operationType)) {
-            call_user_func([$this, $operationType]);
+            call_user_func(array($this, $operationType));
         } else {
             $this->load();
         }

@@ -40,7 +40,7 @@ class TaskController extends RedController
     {
         $this->checkAccessKey();
 
-        $services = Service::model()->findAllByAttributes(['status' => 0]);
+        $services = Service::model()->findAllByAttributes(array('status' => 0));
         $task = array();
         $url = $this->app->createUrl('api/pac');
         foreach ($services as $service) {
@@ -59,7 +59,7 @@ class TaskController extends RedController
     {
         $this->checkAccessKey();
 
-        $services = Service::model()->findAllByAttributes(['status' => 0]);
+        $services = Service::model()->findAllByAttributes(array('status' => 0));
         $task = array();
         $url = $this->app->createUrl('api/chrome');
         foreach ($services as $service) {
@@ -78,7 +78,7 @@ class TaskController extends RedController
     {
         $this->checkAccessKey();
 
-        $services = Service::model()->findAllByAttributes(['status' => 0]);
+        $services = Service::model()->findAllByAttributes(array('status' => 0));
         $task = array();
         $url = $this->app->createUrl('api/view');
         foreach ($services as $service) {
@@ -96,7 +96,7 @@ class TaskController extends RedController
     {
         $this->checkAccessKey();
 
-        $services = Service::model()->findAllByAttributes(['status' => 0]);
+        $services = Service::model()->findAllByAttributes(array('status' => 0));
         $task = array();
         $url = $this->app->createUrl('api/trafficSave');
         foreach ($services as $service) {
